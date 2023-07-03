@@ -37,17 +37,30 @@ public class EmployeeWage {
         EmployeeAttendance= rand.nextInt(3);
         System.out.println(EmployeeAttendance);
 
-        if(EmployeeAttendance == 1){
-            System.out.println("Employee is present!");
-            EmployeeHour=8;
-        } else if (EmployeeAttendance==2) {
-            System.out.println("Part Time Employee!");
-            EmployeeHour=4;
-
-        } else {
-            System.out.println("Employee is absent!");
-            EmployeeHour=0;
-
+//        if(EmployeeAttendance == 1){
+//            System.out.println("Employee is present!");
+//            EmployeeHour=8;
+//        } else if (EmployeeAttendance==2) {
+//            System.out.println("Part Time Employee!");
+//            EmployeeHour=4;
+//
+//        } else {
+//            System.out.println("Employee is absent!");
+//            EmployeeHour=0;
+//
+//        }
+        switch (EmployeeAttendance){
+            case 1:
+                System.out.println("Employee is present!");
+                EmployeeHour=8;
+                break;
+            case 2:
+                System.out.println("Employee Part time!");
+                EmployeeHour=4;
+                break;
+            default:
+                System.out.println("Employee is absent!");
+                EmployeeHour=0;
         }
         DailyEmployeeWage=Dailywage*EmployeeHour;
         System.out.println("Daily Employee Wage:"+DailyEmployeeWage);
