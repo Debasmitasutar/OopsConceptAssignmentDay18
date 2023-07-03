@@ -34,14 +34,17 @@ public class EmployeeWage {
         int DailyEmployeeWage=0;
         //Using random class
         Random rand= new Random();
-        EmployeeAttendance= rand.nextInt(2);
+        EmployeeAttendance= rand.nextInt(3);
         System.out.println(EmployeeAttendance);
 
         if(EmployeeAttendance == 1){
             System.out.println("Employee is present!");
             EmployeeHour=8;
-        }
-        else {
+        } else if (EmployeeAttendance==2) {
+            System.out.println("Part Time Employee!");
+            EmployeeHour=4;
+
+        } else {
             System.out.println("Employee is absent!");
             EmployeeHour=0;
 
