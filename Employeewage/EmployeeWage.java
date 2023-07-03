@@ -32,10 +32,12 @@ public class EmployeeWage {
         int Dailywage=20;
         int EmployeeHour=0;
         int DailyEmployeeWage=0;
-        //Using random class
-        Random rand= new Random();
-        EmployeeAttendance= rand.nextInt(3);
-        System.out.println(EmployeeAttendance);
+        int Monthlywage=0;
+        for (int i=0;i<30;i++) {
+            //Using random class
+            Random rand = new Random();
+            EmployeeAttendance = rand.nextInt(3);
+            //System.out.println(EmployeeAttendance);
 
 //        if(EmployeeAttendance == 1){
 //            System.out.println("Employee is present!");
@@ -49,20 +51,25 @@ public class EmployeeWage {
 //            EmployeeHour=0;
 //
 //        }
-        switch (EmployeeAttendance){
-            case 1:
-                System.out.println("Employee is present!");
-                EmployeeHour=8;
-                break;
-            case 2:
-                System.out.println("Employee Part time!");
-                EmployeeHour=4;
-                break;
-            default:
-                System.out.println("Employee is absent!");
-                EmployeeHour=0;
+            switch (EmployeeAttendance) {
+                case 1:
+                    System.out.println("Employee is present!");
+                    EmployeeHour = 8;
+                    break;
+                case 2:
+                    System.out.println("Employee Part time!");
+                    EmployeeHour = 4;
+                    break;
+                default:
+                    System.out.println("Employee is absent!");
+                    EmployeeHour = 0;
+            }
+
+            DailyEmployeeWage = Dailywage * EmployeeHour;
+            System.out.println("Daily Employee Wage:"+DailyEmployeeWage);
+            Monthlywage=Monthlywage+ DailyEmployeeWage;
+
         }
-        DailyEmployeeWage=Dailywage*EmployeeHour;
-        System.out.println("Daily Employee Wage:"+DailyEmployeeWage);
+        System.out.println("Monthly Employee wage:"+Monthlywage);
     }
 }
